@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className='border py-4 bg-black text-white'>
+        <Navbar/>
+    </div>
   )
 }
 

@@ -5,19 +5,24 @@ import Home from './page/Home'
 import About from './page/About'
 import AuthLayout from './layouts/AuthLayout'
 import Login from './components/Login'
+import Register from './components/Register' 
+import Products from './page/Products'
+import ProductDetailed from './page/ProductDetailed'
 
 
 const App = () => {
   return (
-    <div className='flex justify-center text-blue-700 '>
+    <div>
       <Routes >
         <Route element={<RootLayout />}>
           <Route path="/" element={< Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+         <Route path="/products/:id" element={<ProductDetailed />} />
         </Route>
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={< Login />} />
-          
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> {/* qo'shing */}
         </Route>
       </Routes>
     </div>

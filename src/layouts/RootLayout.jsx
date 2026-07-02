@@ -6,8 +6,10 @@ const RootLayout = () => {
     return (
         <div>
             <Header />
-            <h1>komzksnx</h1>
-            <Outlet />
+            
+          <div className='container mx-auto px-20'>
+              <Outlet />
+          </div>
         </div>
     )
 }
